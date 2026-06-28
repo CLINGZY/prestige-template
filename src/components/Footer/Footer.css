@@ -35,7 +35,7 @@
   font-size: var(--fs-md);
   line-height: 1.75;
 
-  color: rgba(234, 226, 210, 0.45);
+  color: var(--color-text-muted);
 }
 
 .footer__title {
@@ -55,7 +55,7 @@
 .footer__links a {
   font-size: var(--fs-md);
 
-  color: rgba(234, 226, 210, 0.5);
+  color: var(--color-text-muted);
 
   transition: color var(--transition-fast);
 }
@@ -108,7 +108,7 @@
   }
 }
 
-@media (max-width: 37.5rem) {
+@media (max-width: 300px) {
   .footer__top {
     grid-template-columns: 1fr;
   }

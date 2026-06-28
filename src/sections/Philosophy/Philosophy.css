@@ -3,12 +3,14 @@
 
   overflow: hidden;
 
-  padding: var(--section-padding-desktop)
+  padding:
+    var(--section-padding-desktop)
     var(--page-padding-desktop);
 }
 
 .philosophy__ghost {
   position: absolute;
+
   top: 50%;
   right: -3.75rem;
 
@@ -20,7 +22,8 @@
   line-height: 1;
 
   color: transparent;
-  -webkit-text-stroke: 1px rgba(184, 150, 90, 0.05);
+
+  -webkit-text-stroke: 1px rgba(184, 150, 90, 0.12);
 
   pointer-events: none;
   user-select: none;
@@ -57,6 +60,7 @@
 
 .philosophy__quote em {
   color: var(--color-primary);
+
   font-style: italic;
 }
 
@@ -80,6 +84,10 @@
     padding:
       var(--section-padding-mobile)
       var(--page-padding-mobile);
+  }
+
+  .philosophy__ghost {
+    right: -2rem;
   }
 
   .philosophy__body {

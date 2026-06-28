@@ -19,7 +19,7 @@
   line-height: 1;
 
   color: transparent;
-  -webkit-text-stroke: 1px rgba(184, 150, 90, 0.05);
+  -webkit-text-stroke: 1px rgba(184, 150, 90, 0.12);
 
   pointer-events: none;
   user-select: none;

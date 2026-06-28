@@ -1,68 +1,69 @@
 import "./Vision.css";
+import { siteData } from "../../data/siteData";
 
 function Vision() {
+  const { vision } = siteData;
+
   return (
     <section className="vision" id="vision">
-      <div className="vision__ghost">I</div>
+      <div className="vision__ghost">
+        {vision.ghostNumber}
+      </div>
 
       <div className="vision__layout">
         <div className="vision__content">
           <h2 className="vision__heading">
-            We don't design
+            {vision.heading[0]}
             <br />
-            interiors.
+
+            {vision.heading[1]}
             <br />
-            We design <em>legacies.</em>
+
+            {vision.heading[2]}{" "}
+            <em>{vision.heading[3]}</em>
           </h2>
 
-          <p className="vision__text">
-            Forma was built on a single conviction: the environments you inhabit
-            shape the person you become, the clients you attract, and the life
-            you lead. Every project we undertake begins not with measurements,
-            but with intention.
-          </p>
-
-          <p className="vision__text">
-            Our work sits at the intersection of architectural precision and
-            artistic restraint — spaces that feel inevitable rather than
-            decorated, as though they could not have existed any other way.
-          </p>
+          {vision.paragraphs.map(
+            (paragraph, index) => (
+              <p
+                key={index}
+                className="vision__text"
+              >
+                {paragraph}
+              </p>
+            )
+          )}
 
           <div className="vision__stats">
-            <div className="vision__stat">
-              <span className="vision__stat-number">14</span>
-              <span className="vision__stat-label">
-                Years of practice
-              </span>
-            </div>
+            {vision.stats.map((stat) => (
+              <div
+                key={stat.id}
+                className="vision__stat"
+              >
+                <span className="vision__stat-number">
+                  {stat.number}
+                </span>
 
-            <div className="vision__stat">
-              <span className="vision__stat-number">
-                200<sup>+</sup>
-              </span>
-              <span className="vision__stat-label">
-                Projects completed
-              </span>
-            </div>
-
-            <div className="vision__stat">
-              <span className="vision__stat-number">3</span>
-              <span className="vision__stat-label">
-                Countries served
-              </span>
-            </div>
+                <span className="vision__stat-label">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="vision__image-wrapper">
           <img
             className="vision__image"
-            src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=900&q=85"
-            alt="Luxury Interior"
+            src={vision.image.src}
+            alt={vision.image.alt}
+            loading="lazy"
           />
 
           <div className="vision__caption">
-            <span>Ikoyi Residence, Lagos — 2024</span>
+            <span>
+              {vision.image.caption}
+            </span>
           </div>
         </div>
       </div>

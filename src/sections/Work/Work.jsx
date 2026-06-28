@@ -1,144 +1,116 @@
 import "./Work.css";
+import { siteData } from "../../data/siteData";
 
 function Work() {
+  const { work } = siteData;
+
+  const topProjects = work.projects.slice(0, 2);
+  const bottomProjects = work.projects.slice(2, 4);
+
   return (
     <section className="work" id="work">
       <div className="work__intro">
         <h2 className="work__heading">
-          Projects
+          {work.heading[0]}
           <br />
-          that <em>outlive</em>
+          {work.heading[1]} <em>{work.heading[2]}</em>
           <br />
-          the moment.
+          {work.heading[3]}
         </h2>
 
         <p className="work__text">
-          Each commission is a singular act of collaboration —
-          between our studio, our clients, and the unique demands
-          of place. No two spaces share the same resolution.
-          Below is a selection of our most defining work.
+          {work.description}
         </p>
       </div>
 
-        <article className="work__featured">
+      <article className="work__featured">
+        <img
+          className="work__featured-image"
+          src={work.featuredProject.image}
+          alt={work.featuredProject.title.join(" ")}
+        />
+
+        <div className="work__featured-overlay"></div>
+
+        <div className="work__featured-content">
+          <div>
+            <span className="work__tag">
+              {work.featuredProject.tag}
+            </span>
+
+            <h3 className="work__project-name">
+              {work.featuredProject.title[0]}
+              <br />
+              {work.featuredProject.title[1]}
+            </h3>
+
+            <p className="work__project-description">
+              {work.featuredProject.description}
+            </p>
+          </div>
+
+          <div className="work__meta">
+            <span>Year</span>
+            <strong>
+              {work.featuredProject.year}
+            </strong>
+          </div>
+        </div>
+      </article>
+
+      <div className="work__grid">
+        {topProjects.map((project) => (
+          <article
+            key={project.id}
+            className="work__grid-item"
+          >
             <img
-            className="work__featured-image"
-            src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=1800&q=85"
-            alt=""
+              className="work__grid-image"
+              src={project.image}
+              alt={project.title}
             />
 
-            <div className="work__featured-overlay"></div>
+            <div className="work__grid-overlay"></div>
 
-            <div className="work__featured-content">
-                <div>
-                    <span className="work__tag">
-                    Residential — Abuja
-                    </span>
+            <div className="work__grid-content">
+              <span className="work__grid-tag">
+                {project.tag}
+              </span>
 
-                    <h3 className="work__project-name">
-                    The Maitama
-                    <br />
-                    House
-                    </h3>
-
-                    <p className="work__project-description">
-                    A private residence designed around permanence,
-                    natural light and family ceremony.
-                    </p>
-                </div>
-
-                <div className="work__meta">
-                    <span>Year</span>
-                    <strong>2023</strong>
-                </div>
+              <h3 className="work__grid-title">
+                {project.title}
+              </h3>
             </div>
-        </article>
+          </article>
+        ))}
+      </div>
 
+      <div className="work__stack">
+        {bottomProjects.map((project) => (
+          <article
+            key={project.id}
+            className="work__grid-item"
+          >
+            <img
+              className="work__grid-image"
+              src={project.image}
+              alt={project.title}
+            />
 
+            <div className="work__grid-overlay"></div>
 
-        <div className="work__grid">
-            <article className="work__grid-item">
-                <img
-                className="work__grid-image"
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80"
-                alt=""
-                />
+            <div className="work__grid-content">
+              <span className="work__grid-tag">
+                {project.tag}
+              </span>
 
-                <div className="work__grid-overlay"></div>
-
-                <div className="work__grid-content">
-                <span className="work__grid-tag">
-                    Residential — Lagos
-                </span>
-
-                <h3 className="work__grid-title">
-                    Victoria Island Penthouse
-                </h3>
-                </div>
-            </article>
-
-            <article className="work__grid-item">
-                <img
-                className="work__grid-image"
-                src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=700&q=80"
-                alt=""
-                />
-
-                <div className="work__grid-overlay"></div>
-
-                <div className="work__grid-content">
-                <span className="work__grid-tag">
-                    Commercial — Lagos
-                </span>
-
-                <h3 className="work__grid-title">
-                    Lekki Corporate HQ
-                </h3>
-                </div>
-            </article>
+              <h3 className="work__grid-title">
+                {project.title}
+              </h3>
             </div>
-
-            <div className="work__stack">
-            <article className="work__grid-item">
-                <img
-                className="work__grid-image"
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
-                alt=""
-                />
-
-                <div className="work__grid-overlay"></div>
-
-                <div className="work__grid-content">
-                <span className="work__grid-tag">
-                    Kitchen — Lagos
-                </span>
-
-                <h3 className="work__grid-title">
-                    Ikoyi Bespoke Kitchen
-                </h3>
-                </div>
-            </article>
-
-            <article className="work__grid-item">
-                <img
-                className="work__grid-image"
-                src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=1000&q=80"
-                alt=""
-                />
-
-                <div className="work__grid-overlay"></div>
-
-                <div className="work__grid-content">
-                <span className="work__grid-tag">
-                    Hospitality — Port Harcourt
-                </span>
-
-                <h3 className="work__grid-title">
-                    GRA Hospitality Suite
-                </h3>
-                </div>
-            </article>
-            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }

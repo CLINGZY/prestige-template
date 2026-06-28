@@ -3,18 +3,17 @@ import { siteData } from "../../data/siteData";
 
 function Hero() {
   return (
-    <section className="hero">
-
+    <section className="hero" id="hero">
       <img
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80"
-        alt={`${siteData.businessName} hero`}
+        src={siteData.hero.image}
+        alt={`${siteData.logo.text} hero`}
         className="hero__image"
       />
 
       <div className="hero__overlay"></div>
 
       <div className="hero__number">
-        I
+        {siteData.hero.chapterNumber}
       </div>
 
       <div className="hero__content">
@@ -35,6 +34,13 @@ function Hero() {
         <p className="hero__description">
           {siteData.hero.description}
         </p>
+
+        <a
+          href={siteData.hero.primaryCTA.href}
+          className="hero__cta"
+        >
+          {siteData.hero.primaryCTA.text}
+        </a>
       </div>
 
       <div className="hero__scrollIndicator">
@@ -42,7 +48,6 @@ function Hero() {
 
         <div className="hero__scrollLine"></div>
       </div>
-
     </section>
   );
 }

@@ -1,42 +1,55 @@
 import "./Legacy.css";
+import { siteData } from "../../data/siteData";
 
 function Legacy() {
+  const { legacy } = siteData;
+
   return (
-    <section className="legacy" id="contact">
-      <div className="legacy__background"></div>
+    <section className="legacy" id="legacy">
+      <img
+        src={legacy.backgroundImage}
+        alt=""
+        className="legacy__background"
+      />
+
+      <div className="legacy__overlay"></div>
 
       <div className="legacy__content">
         <span className="legacy__eyebrow">
-          Begin a conversation
+          {legacy.eyebrow}
         </span>
 
         <h2 className="legacy__heading">
-          Every <em>great</em>
+          Every <em>{legacy.emphasis}</em>
           <br />
-          space begins
+
+          {legacy.heading[1]}
           <br />
-          with a question.
+
+          {legacy.heading[2]}
         </h2>
 
         <p className="legacy__text">
-          We take on a limited number of projects each year.
-          If you are considering a space that matters, we
-          would like to hear from you.
+          {legacy.text}
         </p>
 
         <div className="legacy__actions">
           <a
-            href="mailto:hello@company.com"
+            href={legacy.primaryCTA.href}
             className="legacy__button-primary"
+            target="_blank"
+            rel="noreferrer"
           >
-            Send an Enquiry
+            {legacy.primaryCTA.text}
           </a>
 
           <a
-            href="tel:+2348000000000"
+            href={legacy.secondaryCTA.href}
             className="legacy__button-secondary"
+            target="_blank"
+            rel="noreferrer"
           >
-            +234 800 000 0000
+            {legacy.secondaryCTA.text}
           </a>
         </div>
       </div>
