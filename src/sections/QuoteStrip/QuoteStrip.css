@@ -1,0 +1,58 @@
+.quote-strip {
+  position: relative;
+
+  height: 50vh;
+  min-height: 20rem;
+
+  overflow: hidden;
+}
+
+.quote-strip__background {
+  position: absolute;
+  inset: -20%;
+
+  background: url("https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1800&q=80")
+    center / cover no-repeat;
+
+  transition: transform 0.1s linear;
+
+  will-change: transform;
+}
+
+.quote-strip__overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(10, 9, 8, 0.55);
+}
+
+.quote-strip__content {
+  text-align: center;
+}
+
+.quote-strip__text {
+  max-width: 42.5rem;
+  padding-inline: 2.5rem;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: var(--fw-light);
+  line-height: 1.5;
+  font-style: italic;
+
+  color: var(--color-text);
+}
+
+.quote-strip__text em {
+  color: var(--color-primary);
+}
+
+@media (max-width: 56.25rem) {
+  .quote-strip__text {
+    padding-inline: var(--page-padding-mobile);
+  }
+}

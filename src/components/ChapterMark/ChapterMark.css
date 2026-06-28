@@ -1,0 +1,40 @@
+.chapter-mark {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+
+  padding-inline: var(--page-padding-desktop);
+}
+
+.chapter-mark__text {
+  white-space: nowrap;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+
+  color: var(--color-primary);
+
+  opacity: 0.8;
+}
+
+.chapter-mark::after {
+  content: "";
+
+  flex: 1;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    rgba(184, 150, 90, 0.4),
+    transparent
+  );
+}
+
+@media (max-width: 56.25rem) {
+  .chapter-mark {
+    padding-inline: var(--page-padding-mobile);
+  }
+}

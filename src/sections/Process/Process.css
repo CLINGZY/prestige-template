@@ -1,0 +1,131 @@
+.process {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    var(--section-padding-desktop)
+    var(--page-padding-desktop);
+}
+
+.process__ghost {
+  position: absolute;
+  left: -2.5rem;
+  bottom: -3.75rem;
+
+  font-family: var(--font-heading);
+  font-size: clamp(12.5rem, 22vw, 20rem);
+  font-weight: 700;
+  line-height: 1;
+
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(184, 150, 90, 0.05);
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.process__header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-7);
+
+  align-items: end;
+
+  margin-bottom: 6.25rem;
+}
+
+.process__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  font-weight: var(--fw-light);
+  line-height: 1.05;
+
+  color: var(--color-text);
+}
+
+.process__heading em {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.process__intro {
+  font-size: var(--fs-md);
+  line-height: 1.9;
+
+  color: var(--color-text-muted);
+}
+
+.process__steps {
+  position: relative;
+  z-index: 2;
+}
+
+.process__step {
+  display: grid;
+  grid-template-columns: 5rem 1fr 1fr;
+  gap: var(--space-5);
+
+  align-items: start;
+
+  padding-block: var(--space-5);
+
+  border-top: 1px solid rgba(184, 150, 90, 0.15);
+
+  transition: border-color var(--transition-normal);
+}
+
+.process__step:hover {
+  border-top-color: rgba(184, 150, 90, 0.5);
+}
+
+.process__number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: var(--fw-light);
+  line-height: 1;
+
+  color: rgba(184, 150, 90, 0.3);
+}
+
+.process__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-light);
+  line-height: 1.2;
+
+  color: var(--color-text);
+}
+
+.process__body {
+  font-size: var(--fs-md);
+  line-height: 1.85;
+
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 56.25rem) {
+  .process {
+    padding:
+      var(--section-padding-mobile)
+      var(--page-padding-mobile);
+  }
+
+  .process__header {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-3);
+
+    margin-bottom: var(--space-5);
+  }
+
+  .process__step {
+    grid-template-columns: 3rem 1fr;
+
+    gap: var(--space-3);
+  }
+
+  .process__body {
+    grid-column: 2;
+  }
+}
