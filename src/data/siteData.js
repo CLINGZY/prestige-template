@@ -1,6 +1,6 @@
 const whatsapp = "https://wa.me/2349070081056"
 const facebook = "https://www.facebook.com/clinton.uduophori"
-const instgram = "https://www.instagram.com/clinton_web_dev?igsh=cWdmdWFpbGF5b2F6/"
+const instagram = "https://www.instagram.com/clinton_web_dev?igsh=cWdmdWFpbGF5b2F6/"
 
 export const siteData = {
   /* NAVBAR */
