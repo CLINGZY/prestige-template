@@ -1,4 +1,5 @@
 import "./QuoteStrip.css";
+import { motion } from "framer-motion";
 import { siteData } from "../../data/siteData";
 
 function QuoteStrip() {
@@ -13,7 +14,16 @@ function QuoteStrip() {
       />
 
       <div className="quote-strip__overlay">
-        <div className="quote-strip__content">
+        <motion.div
+          className="quote-strip__content"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{
+            duration: 1,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
           <p className="quote-strip__text">
             "{quoteStrip.quote[0]}
             <br />
@@ -24,7 +34,7 @@ function QuoteStrip() {
             {quoteStrip.quote[2]}{" "}
             <em>{quoteStrip.emphasis}</em>"
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

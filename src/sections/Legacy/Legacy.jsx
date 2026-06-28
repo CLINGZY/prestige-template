@@ -1,5 +1,33 @@
 import "./Legacy.css";
+import { motion } from "framer-motion";
 import { siteData } from "../../data/siteData";
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 function Legacy() {
   const { legacy } = siteData;
@@ -14,12 +42,24 @@ function Legacy() {
 
       <div className="legacy__overlay"></div>
 
-      <div className="legacy__content">
-        <span className="legacy__eyebrow">
+      <motion.div
+        className="legacy__content"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.span
+          className="legacy__eyebrow"
+          variants={fadeUp}
+        >
           {legacy.eyebrow}
-        </span>
+        </motion.span>
 
-        <h2 className="legacy__heading">
+        <motion.h2
+          className="legacy__heading"
+          variants={fadeUp}
+        >
           Every <em>{legacy.emphasis}</em>
           <br />
 
@@ -27,13 +67,19 @@ function Legacy() {
           <br />
 
           {legacy.heading[2]}
-        </h2>
+        </motion.h2>
 
-        <p className="legacy__text">
+        <motion.p
+          className="legacy__text"
+          variants={fadeUp}
+        >
           {legacy.text}
-        </p>
+        </motion.p>
 
-        <div className="legacy__actions">
+        <motion.div
+          className="legacy__actions"
+          variants={fadeUp}
+        >
           <a
             href={legacy.primaryCTA.href}
             className="legacy__button-primary"
@@ -51,8 +97,8 @@ function Legacy() {
           >
             {legacy.secondaryCTA.text}
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

@@ -22,8 +22,6 @@
   object-fit: cover;
 
   transform: scale(1.06);
-
-  animation: heroImageZoom 8s ease-out forwards;
 }
 
 .hero__overlay {
@@ -178,11 +176,6 @@
     );
 }
 
-@keyframes heroImageZoom {
-  to {
-    transform: scale(1);
-  }
-}
 
 @media (max-width: 56.25rem) {
   .hero {

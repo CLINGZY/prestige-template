@@ -1,8 +1,12 @@
+const whatsapp = "https://wa.me/2349070081056"
+const facebook = "https://www.facebook.com/clinton.uduophori"
+const instgram = "https://www.instagram.com/clinton_web_dev?igsh=cWdmdWFpbGF5b2F6/"
+
 export const siteData = {
   /* NAVBAR */
   logo: {
     type: "text",
-    text: "Atelier Noir",
+    text: "Prestige Collective",
     image: "",
     href: "/",
   },
@@ -34,26 +38,26 @@ export const siteData = {
     {
       id: 1,
       platform: "Instagram",
-      url: "https://instagram.com/",
+      url: instagram,
       icon: "instagram",
     },
     {
       id: 2,
       platform: "Facebook",
-      url: "https://facebook.com/",
+      url: facebook,
       icon: "facebook",
     },
     {
       id: 3,
       platform: "WhatsApp",
-      url: "https://wa.me/2348012345678",
+      url: whatsapp,
       icon: "whatsapp",
     },
   ],
 
   primaryCTA: {
-    text: "Start Your Project",
-    href: "https://wa.me/2348012345678",
+    text: "Enquire Now",
+    href: whatsapp,
   },
 
 
@@ -64,7 +68,7 @@ export const siteData = {
 
     chapterNumber: "I",
 
-    eyebrow: "Interior Architecture",
+    eyebrow: "Design • Architecture • Craft",
 
     title: [
       "Design",
@@ -73,11 +77,11 @@ export const siteData = {
     ],
 
     description:
-    "We create timeless architectural environments, blending craftsmanship, innovation, and refined spatial experiences tailored specifically to discerning homeowners.",
+    "We create timeless environments, experiences, and destinations through exceptional design, craftsmanship, and uncompromising attention to detail.",
 
     primaryCTA: {
-      text: "Start Your Project",
-      href: "https://wa.me/2348012345678",
+      text: "Enquire Now",
+      href: whatsapp,
     },
   },
 
@@ -88,16 +92,16 @@ export const siteData = {
     ghostNumber: "I",
 
     heading: [
-      "We don't design",
-      "interiors.",
-      "We design",
+      "We don't create",
+      "projects.",
+      "We create",
       "legacies.",
     ],
 
     paragraphs: [
-      "Forma was built on a single conviction: the environments you inhabit shape the person you become, the clients you attract, and the life you lead. Every project we undertake begins not with measurements, but with intention.",
+      "Forma was built on a single conviction: the environments and experiences people encounter shape how they live, work, gather, and grow. Every project we undertake begins not with drawings, but with intention.",
 
-      "Our work sits at the intersection of architectural precision and artistic restraint — spaces that feel inevitable rather than decorated, as though they could not have existed any other way.",
+      "Our work exists at the intersection of precision, innovation, and refined execution — delivering outcomes that feel enduring, purposeful, and impossible to imagine any other way.",
     ],
 
     stats: [
@@ -121,7 +125,7 @@ export const siteData = {
     image: {
       src: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=900&q=85",
       alt: "Luxury Interior",
-      caption: "Ikoyi Residence, Lagos — 2024",
+      caption: "Signature Project, Lagos — 2024",
     },
   },
 
@@ -162,13 +166,13 @@ export const siteData = {
     ],
 
     description:
-      "Each commission is a singular act of collaboration — between our studio, our clients, and the unique demands of place. No two spaces share the same resolution. Below is a selection of our most defining work.",
+      "Each commission is a singular act of collaboration — between our studio, our clients, and the unique demands of every brief. No two projects share the same resolution. Below is a selection of our most defining work.",
 
     featuredProject: {
       image:
         "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=1800&q=85",
 
-      tag: "Residential — Abuja",
+      tag: "Flagship Project — Abuja",
 
       title: [
         "The Maitama",
@@ -176,7 +180,7 @@ export const siteData = {
       ],
 
       description:
-        "A private residence designed around permanence, natural light and family ceremony.",
+        "A landmark project conceived around permanence, craftsmanship, and a lasting sense of place.",
 
       year: "2023",
     },
@@ -187,7 +191,7 @@ export const siteData = {
         image:
           "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80",
 
-        tag: "Private Residence",
+        tag: "Residential Project",
 
         title: "Victoria Penthouse",
       },
@@ -197,7 +201,7 @@ export const siteData = {
         image:
           "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=700&q=80",
 
-        tag: "Corporate Interior",
+        tag: "Commercial Development",
 
         title: "Executive Headquarters",
       },
@@ -207,7 +211,7 @@ export const siteData = {
         image:
           "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
 
-        tag: "Bespoke Kitchen",
+        tag: "Bespoke Design",
 
         title: "Culinary Studio",
       },
@@ -217,7 +221,7 @@ export const siteData = {
         image:
           "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=1000&q=80",
 
-        tag: "Private Residence",
+        tag: "Premium Development",
 
         title: "Garden Estate Residence",
       },
@@ -233,8 +237,8 @@ export const siteData = {
 
     quote: [
       "We do not ask what our clients want their",
-      "space to look like. We ask what they want",
-      "their space to make",
+      "project to look like. We ask what they want",
+      "their investment to make",
     ],
 
     emphasis: "possible.",
@@ -250,16 +254,16 @@ export const siteData = {
     quote: [
       "The standard is not excellence.",
       "The standard is",
-      "spaces that could not have been",
-      "designed any other way.",
+      "projects that could not have been",
+      "executed any other way.",
     ],
 
     emphasis: "inevitability",
 
     paragraphs: [
-      "We begin every project with a period of deep listening. We study how our clients move through their day, how light enters their world, what the space is being asked to hold. Only then do we begin to design.",
+      "We begin every project with a period of deep listening. We study our clients' ambitions, objectives, audiences, and long-term vision. Only then do we begin to create.",
 
-      "This process takes longer than most studios are willing to invest. It is also why our projects never feel dated, never need to be redone, and why our clients rarely return to anyone else.",
+      "This process takes longer than most firms are willing to invest. It is also why our work remains relevant for years, continues to deliver value, and earns the trust of clients who return again and again.",
     ],
   },
 
@@ -275,20 +279,21 @@ export const siteData = {
     heading: [
       "The same address.",
       "A completely",
-      "different life.",
+      "different",
+      "future.",
     ],
 
     paragraphs: [
-      "Every project produces a transformation that extends beyond the physical. Guests arrive differently. Conversations change. The relationship to home deepens.",
+      "Every project produces a transformation that extends beyond the physical. Perception changes. Opportunities expand. The value of the investment grows.",
 
-      "This is the cumulative effect of every decision — material, light, proportion and craft — resolved with intention.",
+      "This is the cumulative effect of every decision — strategy, design, execution, and detail — resolved with intention.",
     ],
 
     testimonials: [
       {
         id: 1,
         quote:
-          "They didn't just redesign our office — they redesigned how we present ourselves.",
+          "They didn't just deliver a project — they elevated how our business is perceived.",
 
         name: "Adebayo Okonkwo",
 
@@ -298,7 +303,7 @@ export const siteData = {
       {
         id: 2,
         quote:
-          "Every room now feels like it was made specifically for me, because it was.",
+          "The final result exceeded every expectation. It feels timeless, intentional, and distinctly ours.",
 
         name: "Chidinma Eze",
 
@@ -308,11 +313,11 @@ export const siteData = {
       {
         id: 3,
         quote:
-          "The team understood exactly what we were trying to achieve — before we did.",
+          "The team understood exactly what we wanted to achieve and translated it into something exceptional.",
 
         name: "Tunde & Funmi Adeyemi",
 
-        role: "Residential Clients",
+        role: "Project Clients",
       },
     ],
   },
@@ -330,7 +335,7 @@ export const siteData = {
     ],
 
     intro:
-      "Our process is not a formula. It is a discipline — a set of convictions about how to move from a brief to a space that exceeds expectations.",
+      "Our process is not a formula. It is a discipline — a set of convictions about how to move from an initial brief to a finished outcome that exceeds expectations.",
 
     steps: [
       {
@@ -338,7 +343,7 @@ export const siteData = {
         title: "Discovery & Immersion",
 
         body:
-          "We spend the first weeks doing nothing but listening. We study your life, work, routines and ambitions. Everything informs the design.",
+          "We spend the first weeks doing nothing but listening. We study your vision, objectives, audience, and ambitions. Everything informs the final outcome.",
       },
 
       {
@@ -351,10 +356,10 @@ export const siteData = {
 
       {
         number: "03",
-        title: "Material & Craft Selection",
+        title: "Design Development & Detailing",
 
         body:
-          "Materials are selected not only for appearance, but for longevity, maintenance, origin and how they interact with light.",
+          "Every element is refined for performance, longevity, functionality, and visual impact — ensuring nothing is left unresolved.",
       },
 
       {
@@ -362,7 +367,7 @@ export const siteData = {
         title: "Delivery & Stewardship",
 
         body:
-          "We remain involved until the space is exactly as designed and continue supporting our clients long after completion.",
+          "We remain involved until every detail meets our standard and continue supporting our clients long after completion.",
       },
     ],
   },
@@ -379,23 +384,23 @@ export const siteData = {
 
     heading: [
       "Every great",
-      "space begins",
+      "project begins",
       "with a question.",
     ],
 
     emphasis: "great",
 
     text:
-      "We take on a limited number of projects each year. If you are considering a space that matters, we would like to hear from you.",
+      "We take on a limited number of projects each year. If you are considering something significant, we would like to hear from you.",
 
     primaryCTA: {
-      text: "Start a Conversation",
-      href: "https://wa.me/2348000000000",
+      text: "Enquire Now",
+      href: whatsapp,
     },
 
     secondaryCTA: {
-      text: "@ateliernoirstudio",
-      href: "https://instagram.com/ateliernoirstudio",
+      text: "@prestigecollective",
+      href: instagram,
     },
   },
 
@@ -404,98 +409,96 @@ export const siteData = {
 
   /* FOOTER */
   footer: {
-    brand: {
-      name: "Atelier Noir",
+  brand: {
+    name: "Prestige Collective",
 
-      description:
-        "Interior design and architectural services for clients who understand that a well designed space is one of life's most enduring investments.",
+    description:
+      "Premium design, architecture, and consultancy services for clients who understand that exceptional projects are among life's most enduring investments.",
+  },
+
+  columns: [
+    {
+      title: "Services",
+
+      links: [
+        {
+          label: "Residential Projects",
+          href: "#",
+        },
+
+        {
+          label: "Commercial Projects",
+          href: "#",
+        },
+
+        {
+          label: "Architecture & Design",
+          href: "#",
+        },
+
+        {
+          label: "Project Consultation",
+          href: "#",
+        },
+
+        {
+          label: "Bespoke Solutions",
+          href: "#",
+        },
+      ],
     },
 
-    columns: [
-      {
-        title: "Services",
+    {
+      title: "Studio",
 
-        links: [
-          {
-            label: "Residential Interiors",
-            href: "#",
-          },
+      links: [
+        {
+          label: "Work",
+          href: "#work",
+        },
 
-          {
-            label: "Commercial Spaces",
-            href: "#",
-          },
+        {
+          label: "Philosophy",
+          href: "#philosophy",
+        },
 
-          {
-            label: "Architecture",
-            href: "#",
-          },
+        {
+          label: "Process",
+          href: "#process",
+        },
 
-          {
-            label: "Bespoke Furniture",
-            href: "#",
-          },
+        {
+          label: "Legacy",
+          href: "#legacy",
+        },
+      ],
+    },
 
-          {
-            label: "Kitchen Design",
-            href: "#",
-          },
-        ],
-      },
+    {
+      title: "Connect",
 
-      {
-        title: "Studio",
+      links: [
+        {
+          label: "Instagram",
+          href: instagram,
+        },
 
-        links: [
-          {
-            label: "Work",
-            href: "#work",
-          },
+        {
+          label: "Facebook",
+          href: facebook,
+        },
 
-          {
-            label: "Philosophy",
-            href: "#philosophy",
-          },
+        {
+          label: "WhatsApp",
+          href: whatsapp,
+        },
+      ],
+    },
+  ],
 
-          {
-            label: "Process",
-            href: "#process",
-          },
+  copyright:
+    "© 2026 Atelier Noir. All rights reserved.",
 
-          {
-            label: "Legacy",
-            href: "#legacy",
-          },
-        ],
-      },
-
-      {
-        title: "Connect",
-
-        links: [
-          {
-            label: "Instagram",
-            href: "https://instagram.com",
-          },
-
-          {
-            label: "Facebook",
-            href: "https://facebook.com",
-          },
-
-          {
-            label: "WhatsApp",
-            href: "https://wa.me/2348000000000",
-          },
-        ],
-      },
-    ],
-
-    copyright:
-      "© 2026 Atelier Noir. All rights reserved.",
-
-    locations: "By Appointment Only",
-  },
+  locations: "By Appointment Only",
+},
 };
-
-

@@ -1,5 +1,33 @@
 import "./Work.css";
+import { motion } from "framer-motion";
 import { siteData } from "../../data/siteData";
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 function Work() {
   const { work } = siteData;
@@ -9,21 +37,42 @@ function Work() {
 
   return (
     <section className="work" id="work">
-      <div className="work__intro">
-        <h2 className="work__heading">
+      <motion.div
+        className="work__intro"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.h2
+          className="work__heading"
+          variants={fadeUp}
+        >
           {work.heading[0]}
           <br />
           {work.heading[1]} <em>{work.heading[2]}</em>
           <br />
           {work.heading[3]}
-        </h2>
+        </motion.h2>
 
-        <p className="work__text">
+        <motion.p
+          className="work__text"
+          variants={fadeUp}
+        >
           {work.description}
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <article className="work__featured">
+      <motion.article
+        className="work__featured"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 1,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+      >
         <img
           className="work__featured-image"
           src={work.featuredProject.image}
@@ -51,18 +100,26 @@ function Work() {
 
           <div className="work__meta">
             <span>Year</span>
+
             <strong>
               {work.featuredProject.year}
             </strong>
           </div>
         </div>
-      </article>
+      </motion.article>
 
       <div className="work__grid">
         {topProjects.map((project) => (
-          <article
+          <motion.article
             key={project.id}
             className="work__grid-item"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           >
             <img
               className="work__grid-image"
@@ -81,15 +138,22 @@ function Work() {
                 {project.title}
               </h3>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
 
       <div className="work__stack">
         {bottomProjects.map((project) => (
-          <article
+          <motion.article
             key={project.id}
             className="work__grid-item"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           >
             <img
               className="work__grid-image"
@@ -108,7 +172,7 @@ function Work() {
                 {project.title}
               </h3>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
     </section>
