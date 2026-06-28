@@ -497,7 +497,7 @@ export const siteData = {
   ],
 
   copyright:
-    "© 2026 Atelier Noir. All rights reserved.",
+    "© 2026 Prestige Collective. All rights reserved.",
 
   locations: "By Appointment Only",
 },
